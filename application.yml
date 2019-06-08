@@ -1,0 +1,25 @@
+# GitHub 新建一个名为 microservicecloudd-config 的新Repository
+# 获得SSH协议的git地址: git@github.com:Noodlescn/microservicecloud-config.git
+# 本地硬盘目录上,新建Git仓库,并clone
+#git clone git@github.com:Noodlescn/microservicecloud-config.git
+
+# 本地Git仓库,microservicecloud-config 新建 application.yml
+spring:
+    profiles:
+        active:
+        - dev
+---
+spring:
+    profiles: dev       # 开发环境
+    application:
+        name: microservicecloud-config-noodles-dev
+---
+spring:
+    profiles: test      # 测试环境
+    application:
+        name: microservicecloud-config-noodles-test
+
+# 文件保存为 UTF-8 格式
+
+
+# 将application.yml推送到github上
